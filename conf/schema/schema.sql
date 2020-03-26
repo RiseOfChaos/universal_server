@@ -1,7 +1,8 @@
-CREATE TABLE User (
-    username TEXT,
-    email TEXT,
+CREATE TABLE Player (
+    id serial PRIMARY KEY,
+    username TEXT UNIQUE NOT NULL,
+    email TEXT UNIQUE NOT NULL,
     password TEXT,
-    joined timestamp,
-    emailVerified boolean
+    joined timestamp NOT NULL DEFAULT(now()),
+    emailVerified boolean NOT NULL DEFAULT(false)
 );
