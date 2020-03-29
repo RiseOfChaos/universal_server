@@ -18,6 +18,6 @@ class User {
       ..email = map['email']
       ..password = map['password']
       ..joined = map['joined']
-      ..emailVerified = map['emailVerified'];
+      ..emailVerified = map['emailverified'] == 't';
   }
 }

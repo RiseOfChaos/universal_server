@@ -69,7 +69,7 @@ class UserDBImpl implements UserDB {
             }))
         .one();
     if (row == null) {
-      // TODO
+      // TODO better error
       throw Exception();
     }
     return fetchById(db, row['id']);
@@ -81,7 +81,7 @@ class UserDBImpl implements UserDB {
         'update player set emailVerified = true where id = @{id}',
         values: {'id': id}));
     if (tag.rowsAffected != 1) {
-      // TODO
+      // TODO better error
       throw Exception();
     }
   }
