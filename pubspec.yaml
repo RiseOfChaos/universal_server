@@ -14,6 +14,7 @@ dependencies:
   tuple:
   libpg:
     path: ../../dart/libpg
+  jaguar_jwt:
 
 dev_dependencies:
   pedantic: ^1.8.0

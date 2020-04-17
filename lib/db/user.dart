@@ -18,6 +18,8 @@ abstract class UserDB {
 }
 
 class UserDBImpl implements UserDB {
+  const UserDBImpl();
+
   @override
   Future<User> fetchById(Querier db, int id) async {
     final row = await db
@@ -86,3 +88,5 @@ class UserDBImpl implements UserDB {
     }
   }
 }
+
+const userDB = UserDBImpl();
